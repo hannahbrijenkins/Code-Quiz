@@ -36,6 +36,8 @@ main {
 
 .question-wrap {
     margin-bottom: 15px;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .btn-container {
