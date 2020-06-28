@@ -12,21 +12,29 @@ const startContainer =document.getElementById('start-btn-container')
 const questionContainer = document.getElementById('quiz')
 const questionElement = document.getElementById('question')
 const answerElement = document.getElementById('answer')
+// const answerButtons = document.getElementById('answer-buttons')
 
 startButton.addEventListener("click", startGame)
 
 function startGame() {
-    // debugger;
     console.log("game has started")
     startContainer.classList.add('hide')
     questionContainer.classList.remove('hide')
-    nextQuestion()
+    //This function declaration below updates the question
+    startQuestion()
 }
 
-function nextQuestion(question) {
+function startQuestion(question) {
     questionElement.innerText = questions[0]["question"];
-    answerElement.innerText = questions[0]["answers"];
+    answerElement.innerText = questions[0][1];
+
 }
+
+// function addAnswerButtons(answers) {
+//     answerButtons = document.createElement("button")
+//     answerButtons.innerHTML = questions[0][1];
+    
+// }
 
 function selectAnswer() {
 
