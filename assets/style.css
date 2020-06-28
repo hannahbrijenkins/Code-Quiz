@@ -66,3 +66,39 @@ main {
     border-top: solid 1px var(--gray);
     padding-top: 10px;
 }
+
+.start-btn-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px;
+    align-items: center;
+}
+
+.start-btn-wrap h1 {
+    margin: 10px;
+}
+
+.start-btn-wrap p {
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.start-btn {
+    margin: 10px;
+    padding: 5px 15px;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--light);
+    border-radius: 5px;
+    font-size: 35px;
+}
+
+.start-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.hide {
+    display: none;
+}

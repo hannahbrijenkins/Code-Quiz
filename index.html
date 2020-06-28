@@ -1,7 +1,6 @@
 <!--
     TO DO:
-    Create HTML basic structure
-    Give CSS styles
+    
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +18,8 @@
         <h3>Time:</h3>
     </header>
     <main class="container">
-        <div class="quiz-wrap" id="quiz">
-            <div class="question-wrap hide" id="question"><h1>This is an example question</h1></div>
+        <div class="quiz-wrap hide" id="quiz">
+            <div class="question-wrap" id="question"><h1>This is an example question</h1></div>
             <div class="btn-container" id="answer-buttons">
                 <button class="answer">Answer 1</button>
                 <button class="answer">Answer 2</button>
@@ -31,7 +30,11 @@
             <div class="answer-status">
                 <p class="question-status">This will display if answer is wrong or right</p>
             </div>
-            <button class="start-btn hide">start</button>
+        </div>
+        <div class="start-btn-wrap">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code related questions within the time limit. Keep in mind the incorrect answers will penalize you by reducing your time by 10 seconds!</p>
+            <button class="start-btn">Start</button>
         </div>
         <div class="score-prompt-wrap"></div>
     </main>
