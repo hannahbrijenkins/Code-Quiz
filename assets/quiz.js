@@ -12,6 +12,9 @@ const startContainer =document.getElementById('start-btn-container')
 const questionContainer = document.getElementById('quiz')
 const questionElement = document.getElementById('question')
 const answerElement = document.getElementById('answer')
+var buttonElement = document.getElementById('answer-buttons')
+var timerEvent = 45;
+
 // const answerButtons = document.getElementById('answer-buttons')
 
 startButton.addEventListener("click", startGame)
@@ -21,26 +24,54 @@ function startGame() {
     startContainer.classList.add('hide')
     questionContainer.classList.remove('hide')
     //This function declaration below updates the question
-    startQuestion()
+    startQuestion();
+    var timerEvent = 45;
+    startTimer();
+    
 }
 
 function startQuestion(question) {
     questionElement.innerText = questions[0]["question"];
-    answerElement.innerText = questions[0][1];
 
+    //this gives a variable to the answer array within first question index
+    // const answerArray = questions[0].answers
+
+    // //this gives a variable to the individual text index within answer array
+    // const answerText = questions[0].answers[0].text
+
+    // //this is to loop the answers
+    // for (let i = 0; i < answerArray.length; i++)
+
+    // //This changes the inner text of DOM id element, and uses it to create button name
+    // answerElement.innerHTML = answerText;
+
+    var btn = document.createElement("button");
+    btn.innerHTML = answerText
+    document.getElementById("answer-buttons").appendChild(btn);
+    btn.classList.add('answer-class')
 }
 
-// function addAnswerButtons(answers) {
-//     answerButtons = document.createElement("button")
-//     answerButtons.innerHTML = questions[0][1];
-    
+// function createAnswers() {
+//     var button = document.createElement("button")
+//     button.innerText = 
 // }
 
 function selectAnswer() {
 
 }
 
+function startTimer() {
+    timerEvent = timerEvent - 1;
+    if (timerEvent < 45) {
+        timerEvent.innerHTML = timerEvent;
+    }
 
+    if (timerEvent < 1) {
+        window.clearInterval(update);
+    }
+}
+
+    update = setInterval("startTimer()", 1000);
 //this is an array of questions
 const questions = [
     {

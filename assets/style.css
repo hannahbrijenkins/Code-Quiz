@@ -46,7 +46,7 @@ main {
     justify-content: flex-start;
 }
 
-.answer {
+.answer-class {
     margin: 3px;
     padding: 10px;
     width: 30%;
